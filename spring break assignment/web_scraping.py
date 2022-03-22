@@ -1,4 +1,4 @@
-import bs4
+from bs4 import BeautifulSoup
 import requests
 
 with open('raw_script_urls.txt') as f:
@@ -8,7 +8,7 @@ urls = []
 names = []
 for line in lines:
     nlist = line.split(" +++$+++ ")
-    urls.append(nlist[2])
+    urls.append(nlist[2].strip())
     names.append(nlist[1])
 
 def scrape(url):
@@ -18,6 +18,7 @@ def scrape(url):
 
 for i in range(len(urls)):
     towrite = scrape(urls[i])
+    soup = BeautifulSoup(towrite, "html.parser")
     fname = names[i] + '.txt'
     with open(fname, 'w') as f:
-        f.write(towrite)
+        f.write(soup.text)
