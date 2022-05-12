@@ -1,4 +1,4 @@
-# 3/39/22 - Revised Patterns and Outliers
+# 3/29/22 - Revised Patterns and Outliers
 
 Looking back on the "Seven ways humanists are using computers to understand text" reading from an end of the semester perspective is really interesting because we ended up doing a lot of the things that this article talks about in class or for my final project. It was a great way to introduce topics such as NLP in laymens terms before really digging deep into the actual code.
 
